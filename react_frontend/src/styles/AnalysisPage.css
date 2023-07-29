@@ -1,0 +1,46 @@
+.analysisPageContainer {
+  height: 83.5vh;
+  width: 100vw;
+  background-color: #4f4f4f;
+  color: #ffffff;
+
+  border: none !important;
+}
+
+.spacer {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.distChannel,
+.custNumber {
+  margin-bottom: 6px !important;
+}
+
+.firstPart {
+  width: 33%;
+  margin: 12px;
+  margin-top: 30px;
+  border: 1px solid white;
+  padding: 20px;
+  min-width: 50vh;
+}
+.secondPart {
+  width: 28%;
+  margin: 12px;
+  margin-top: 50px;
+  background-color: wheat;
+}
+
+.thirdPart {
+  width: 33%;
+  margin: 12px;
+}
+.highcharts-legend-item > text {
+  fill: white !important;
+}
+
+.highcharts-axis-line {
+  stroke: white !important;
+}

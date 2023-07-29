@@ -1,0 +1,17 @@
+127.0.0.1 - - [15/Jun/2023:12:45:01 +0600] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:45:04 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 6
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:45:55 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 6
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:45:56 +0600] "GET /images/icons/gear.png HTTP/1.1" 404 780
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:45:56 +0600] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [15/Jun/2023:12:46:42 +0600] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:46:44 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 2557
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:46:50 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 2557
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:46:50 +0600] "GET /images/icons/gear.png HTTP/1.1" 404 780
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:06 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 2557
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:06 +0600] "GET /images/icons/gear.png HTTP/1.1" 404 780
+127.0.0.1 - - [15/Jun/2023:12:47:27 +0600] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:28 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 4120
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:28 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 4120
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:28 +0600] "GET /images/icons/gear.png HTTP/1.1" 404 780
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:36 +0600] "GET /h2h_milestone_3/DataLoadingServlet HTTP/1.1" 200 4120
+0:0:0:0:0:0:0:1 - - [15/Jun/2023:12:47:36 +0600] "GET /images/icons/gear.png HTTP/1.1" 404 780

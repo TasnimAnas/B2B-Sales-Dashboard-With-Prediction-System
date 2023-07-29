@@ -1,0 +1,89 @@
+package com.highradius.servlets;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.highradius.implementation.InvoiceDaoImpl;
+
+/**
+ * Servlet implementation class DataDeletingServlet
+ */
+@WebServlet("/DataDeletingServlet")
+public class DataDeletingServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private InvoiceDaoImpl invoiceDaoImpl;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public DataDeletingServlet() {
+		super();
+		try {
+			invoiceDaoImpl = new InvoiceDaoImpl();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated constructor stub
+	}
+
+	public void deleteInvoice(List<Integer> idList) throws SQLException {
+		invoiceDaoImpl.deleteInvoice(idList);
+	}
+
+	/**
+	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
+	 */
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.addHeader("Access-Control-Allow-Origin", "*");
+	    response.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, HEAD");
+	    response.addHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Origin, X-Requested-With, Content-Type, Accept");
+	    response.addHeader("Access-Control-Max-Age", "1728000");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(request.getInputStream()));
+		StringBuilder jsonBuilder = new StringBuilder();
+		String line;
+		while ((line = reader.readLine()) != null) {
+			jsonBuilder.append(line);
+		}
+		reader.close();
+
+		String jsonData = jsonBuilder.toString();
+		System.out.println(jsonData);
+		// Parse the JSON data into a Person object using Gson
+		Gson gson = new Gson();
+		ReceivedData_Delete recv = gson.fromJson(jsonData, ReceivedData_Delete.class);
+		// Now you can access the properties of the person object
+		try {
+			deleteInvoice(recv.idList);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// Convert the array to JSON
+		PrintWriter out = response.getWriter();
+		// Write the JSON string to the output stream
+		out.println("Data deleted successfully");
+
+		// Close the output stream
+		out.close();
+	}
+
+}
+
+class ReceivedData_Delete {
+	public List<Integer> idList;
+}
