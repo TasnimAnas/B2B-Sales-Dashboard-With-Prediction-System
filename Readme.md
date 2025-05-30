@@ -1,4 +1,4 @@
-# AI-Powered Sales Management and Forecasting
+# ML-Powered Sales Forecasting with Dashboard
 
 This project is a full-stack application that provides a B2B sales dashboard with predictive analytics. It consists of a React frontend, a Flask backend for ML model serving, and a servlet backend (Java) for additional server-side logic.
 
